@@ -13,59 +13,127 @@
 </head>
 <body>
     <!--HEADER-->
-    <header class="header">
-        <a href="../index.html">
-            <img src="../img/sabia-cultura-eco-hz-black.svg" alt="sabia-cultura-eco" class="header__logo">
-        </a>
-        <ul class="header__nav">
-            <li class="header__nav__element"><a href="./sobre-nosotros.html">SOBRE NOSOTROS</a></li>
-            <li class="header__nav__element"><a href="./tienda.html">TIENDA</a></li>
-            <li class="header__nav__element"><a href="./contacto.html">CONTACTO</a></li>
-        </ul>
-        <div class="header__iconos">
-            <a href="./carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <nav class="navbar navbar-expand-lg py-3 navbar-light bg-light shadow-sm">
+        <div class="container navbarAlign">
+            <a href="../index.html" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="../img/sabia-cultura-eco-hz-black.svg" alt="" class="d-inline-block align-middle mr-2 header__logo">
+            </a>
+
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse navbarAlign">
+                <ul class="navbar-nav ml-auto mx-auto">
+                    <li class="nav-item"><a href="../pages/sobre-nosotros.html" class="nav-link">SOBRE NOSOTROS</a></li>
+                    <li class="nav-item"><a href="../pages/tienda.html" class="nav-link">TIENDA</a></li>
+                    <li class="nav-item"><a href="../pages/contacto.html" class="nav-link">CONTACTO</a></li>
+                </ul>
+                <div class="header__iconos">
+                    <a href="../pages/carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
     <!--FIN HEADER-->
 
     <!--PENDIENTE DISEÑO-->
 
-    <main class="contenedor">
-        <h1 class="center">PÁGINA EN CONSTRUCCIÓN</h1>
+    <main class="contenedorTienda">
+        <h1 class="center">Productos</h1>
+        <ul class="categories">
+            <a href="#" class="categorieFocus"><li>TODOS</li></a>
+            <a href="#"><li>TOTE BAGS</li></a>
+            <a href="#"><li>AJUSTABLES</li></a>
+        </ul>
+        <div class="row">
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+            <div class="product"> <img src="../img/tote-bag-sencilla.png" alt="">
+                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                </ul>
+            </div>
+            <div class="tag bg-yellow">OFERTA</div>
+            <div class="title pt-4 pb-1">Tote Bag - Sencilla</div>
+            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="price">$ 17.500 COP</div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+            <div class="product"> <img src="../img/tote-bag-bolsillo.png" alt="">
+                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                </ul>
+            </div>
+            <div class="tag bg-black">AGOTADO</div>
+            <div class="title pt-4 pb-1">Tote Bag + Bolsillo simple</div>
+            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="price">$ 19.500 COP</div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+            <div class="product"> <img src="../img/Ajustable.png" alt="">
+                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                </ul>
+            </div>
+            <div class="tag bg-green">NUEVO</div>
+            <div class="title pt-4 pb-1">Ajustable</div>
+            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="price">$ 4.100 COP</div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+            <div class="product"> <img src="../img/tula.jpeg" alt="">
+                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                </ul>
+            </div>
+            <div class="title pt-4 pb-1">Tula</div>
+            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="price">$ 22.700 COP</div>
+        </div>
+    </div>
     </main>
     
     <!--FOOTER-->
     <footer class="footer">
-        <div class="footer__logo">
-            <img src="../img/LOGO-SABIA-VERTICAL-BLANCO.png" alt="">
-            <div class="footer__logo__rrss">
-                <a href="#"><img src="../img/icons8-instagram.svg" alt="instagram"></a>
-                <a href="#"><img src="../img/icons8-facebook-nuevo.svg" alt="facebook"></a>
+        <div class="footer-row">
+            <div class="footer__logo center">
+                <img src="../img/LOGO-SABIA-VERTICAL-BLANCO.png" alt="">
+                <div class="footer__logo__rrss">
+                    <a href="https://www.instagram.com/sabiaculturaeco/"><img src="../img/icons8-instagram.svg" alt="instagram" class="jump"></a>
+                    <a href="https://www.facebook.com/sabiaculturaeco/"><img src="../img/icons8-facebook-nuevo.svg" alt="facebook" class="jump"></a>
+                </div>
             </div>
-        </div>
-        <div class="footer__section">
-            <p class="footer__section__titulo">ENLACES RÁPIDOS</p>
-            <ul class="footer__section__lista">
-                <li><a href="#">Compra ahora</a></li>
-                <li><a href="#">Encuéntranos en Mercadolibre</a></li>
-                <li><a href="#">Sabia para emprendedores</a></li>
-            </ul>
-        </div>
-        <div class="footer__section">
-            <p class="footer__section__titulo">SOBRE</p>
-            <ul class="footer__section__lista">
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Garantía</a></li>
-            </ul>
-        </div>
-        <div class="footer__section">
-            <p class="footer__section__titulo">AYUDA</p>
-            <ul class="footer__section__lista">
-                <li><a href="#">Contacto</a></li>
-                <li><a href="./cookies.html">Política de tratamiento de datos</a></li>
-                <li><a href="./calculadora/inicio-calculadora.html">Calculadora</a></li>
-            </ul>
+            <div class="footer__section">
+                <p class="footer__section__titulo">ENLACES RÁPIDOS</p>
+                <ul class="footer__section__lista">
+                    <li><a href="#">Compra ahora</a></li>
+                    <li><a href="https://www.sabiaculturaeco.com.co/">Encuéntranos en Mercadolibre</a></li>
+                    <li><a href="#">Sabia para emprendedores</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <p class="footer__section__titulo">SOBRE</p>
+                <ul class="footer__section__lista">
+                    <li><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="#">Garantía</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <p class="footer__section__titulo">AYUDA</p>
+                <ul class="footer__section__lista">
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./cookies.html">Política de tratamiento de datos</a></li>
+                    <li><a href="./calculadora/inicio-calculadora.html">Calculadora</a></li>
+                </ul>
+            </div>
         </div>
         <p class="footer__copy">© 2022 SABIA CULTURA ECO</p>
     </footer>
