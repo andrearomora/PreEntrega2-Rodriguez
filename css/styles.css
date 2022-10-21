@@ -8,11 +8,11 @@
 :root{
     --main-color: #11b28e;
     --black: #2C2C2C;
-    --typeHeaderSize: 35px;
+    --typeHeaderSize: 30px;
     --typeHeaderWeight: 700;
-    --typeSubheaderSize: 24px;
+    --typeSubheaderSize: 20px;
     --typeSubheaderWeight: 500;
-    --typeBaseSize: 18px;
+    --typeBaseSize: 14px;
     --typeBaseWeight: 400;
 }
 /*HEADER*/
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 5px 10%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -117,7 +117,11 @@ h1{
     font-size: var(--typeHeaderSize);
     font-weight: var(--typeHeaderWeight);
 }
-h3{
+h2{
+    font-size: var(--typeHeaderSize);
+    font-weight: var(--typeHeaderWeight);
+}
+h3, h4{
     font-size: var(--typeSubheaderSize);
     font-weight: var(--typeSubheaderWeight);
 }
