@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 :root{
     --main-color: #11b28e;
@@ -62,6 +64,7 @@
     justify-content: space-around;
 }
 .footer__logo {
+    align-self: flex-start;
     padding: 10px;
 }
 .footer__logo img{
@@ -110,21 +113,25 @@
 }
 @keyframes jump{
     0%{
-      transform: translatey(0px);
+        transform: translatey(0px);
     }
     50%{
-      transform: translatey(-10px);
+        transform: translatey(-10px);
     }
     100%{
-      transform: translatey(0px);
+        transform: translatey(0px);
     }
-  }
+}
 /*FIN FOOTER*/
 
 /*FOOTER RESPONSIVE*/
 @media (max-width: 600px) {
     .footer-row{
         display: block;
+    }
+    .footer__logo{
+        text-align: center;
+        margin: 0 auto;
     }
     .footer__logo__rrss{
         display: flex;
@@ -180,6 +187,16 @@ p, label, option, input, select{
     border-color:var(--main-color);
     text-decoration: none;
 }
+.btn:hover{
+    background-color: #01a27f;
+    color: hsl(0, 0%, 96%);
+    padding: 15px 40px;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color:var(--main-color);
+    text-decoration: none;
+}
 .center{
     text-align: center;
     margin: 0 auto;
@@ -199,48 +216,245 @@ p, label, option, input, select{
     justify-content: space-between;
     padding-bottom: 20px;
 }
+@media (max-width: 600px){
+    .contenedor{
+        margin-top: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 30px;
+    }
+}
 /*FIN BODY*/
 
 /*HOME*/
+
+/*BANNER*/
 .homeBanner{
-    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    padding: 0% 10% 0% 10%;
+    text-align: right;
     width: 100%;
-    height: 800px;
+    height: 85vh;
     background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    align-items: flex-end;
 }
+.homeBanner__titulo{
+    font-size: 35px;
+}
+.homeBanner__texto{
+    margin-left: 50%;
+    font-size: 20px;
+}
+.homeBanner a{
+    width: 200px;
+}
+
+/*BENEFICIOS*/
 .homeBeneficios{
-    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 15vh;
     text-align: center;
     background-color: whitesmoke;
 }
 .homeBeneficios__beneficio{
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.homeBeneficios__beneficio i{
+    font-size: 40px;
+}
+.homeBeneficios__beneficio span{
+    font-size: var(--typeSubheaderSize);
+    padding-left: 5%;
+}
+/*CATEGORÍAS*/
+.homeCategoria{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0% 15%;
+}
+.homeCategoria__titulo{
+    text-align: center;
+}
+.homeCategoria__titulo__pre{
+    font-size: 24px;
+}
+.homeCategoria__titulo__categorias{
+    border-bottom: var(--main-color) solid 2px;
+    margin-top: 10px;
+    padding-bottom: 2%;
+}
+.homeCategoria__categorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.homeCategoria__categorias__todas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .homeCategoria__categorias__una{
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10%;
 }
 .homeCategoria__categorias__una__img{
-    height: 300px;
+    height: 250px;
+}
+.homeCategoria__categorias__una__pie{
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--typeSubheaderSize);
+    font-weight: var(--typeSubheaderWeight);
+}
+.homeCategoria__categorias__una__pie:hover{
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--typeSubheaderSize);
+    font-weight: var(--typeSubheaderWeight);
+}
+.homeCategoria__categorias a{
+    width: 200px;
+}
+.homePropuestaValor{
+    height: 100vh;
+    background-image: url(../img/Bolsas-de-algodón-en-bogota.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:right;
+    display: flex;
+    align-items: center;
+}
+.homePropuestaValor__contenido{
+    padding: 0% 10%;
+}
+.homePropuestaValor__lista__elemento{
+    display: flex;
+}
+.homePropuestaValor__icono{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    border-radius: 50%;
+}
+.homePropuestaValor__lista{
+    list-style: none;
+}
+@media (max-width: 600px){
+    /*BANNER RESPONSIVE*/
+    .homeBanner{
+        display: flex;
+        justify-items: center;
+        margin: 0px auto;
+        text-align: center;
+        width: 100%;
+        height: 85vh;
+        background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:initial;
+        transform: scaleX(-1);
+        align-items: center;
+    }
+    .homeBanner__texto{
+        margin-left: 0%;
+        font-size: 20px;
+        transform: scaleX(-1);
+        background: rgba(245,245,245,.5);
+    }
+    .homeBanner__titulo{
+        font-size: 35px;
+        transform: scaleX(-1);
+        background: rgba(245,245,245,.5);
+    }
+    .homeBanner a{
+        transform: scaleX(-1);
+        height: 30px;
+        width: 150px;
+        padding: 0;
+        font-weight: 530;
+    }
+    .homeBanner a:hover{
+        transform: scaleX(-1);
+        background-color: #01a27f;
+        height: 30px;
+        width: 150px;
+        padding: 0;
+        font-weight: 530;
+    }
+    /*FIN BANNER RESPONSIVE*/
+
+    /*BENEFICIOS RESPONSIVE*/
+    .homeBeneficios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 30px;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+    .homeBeneficios__beneficio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .homeBeneficios__beneficio i{
+        font-size: 30px;
+    }
+    .homeBeneficios__beneficio span{
+        font-size: 15px;
+        padding-left: 0%;
+    }
+    /*FIN BENEFICIOS RESPONSIVE*/
+
+    /*CATEGORÍAS RESPONSIVE*/
+    .homeCategoria{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 5% 10%;
+    }
+    .homeCategoria__categorias__todas{
+        flex-direction: column;
+    }
+    /*FIN CATEGORÍAS RESPONSIVE*/
 }
 /*FIN HOME*/
 
 /*SOBRE NOSOTROS*/
-.sobreNosotros{
-    margin-top: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 30px;
-}
 .sobreNosotros__titular{
     background-color: var(--black);
-    margin-top: 115px;
+    margin-top: 0px;
     padding: 50px;
     color: whitesmoke;
     text-align: center;
 }
+
 /*FIN SOBRE NOSOTROS*/
 
 /*COOKIES*/
@@ -248,6 +462,14 @@ p, label, option, input, select{
     font-style: italic;
     color:rgb(174, 173, 173);
     padding: 10px 0px 50px 0px;
+}
+@media (max-width: 600px){
+    .cookies{
+        margin-top: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 30px;
+    }
 }
 /*FIN COOKIES*/
 
