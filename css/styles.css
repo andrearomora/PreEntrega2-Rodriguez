@@ -567,12 +567,34 @@ p, label, option, input, select{
 /*FIN COOKIES*/
 
 /*CONTACTO*/
-
 .contacto{
-    padding: 50px 0px;
+    padding: 50px 0px 0px opx;
 }
-.contacto div{
-    padding: 0px 0px 30px 0px;
+.contacto__2input{
+    display: flex;
+    flex-direction: row;
+}
+.contacto__1input{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2% 1%;
+}
+.contacto__2input__input{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2% 1%;
+}
+.contacto .btn{
+    margin: 2% 1%;
+}
+.contacto-padding{
+    padding: 1% 1%;
+}
+.contacto__datos{
+    display: flex;
+    justify-content: space-around;
 }
 /*FIN CONTACTO*/
 
