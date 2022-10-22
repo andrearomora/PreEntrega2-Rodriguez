@@ -336,6 +336,7 @@ p, label, option, input, select{
 .homeCategoria__categorias a{
     width: 200px;
 }
+/*PROPUESTA DE VALOR*/
 .homePropuestaValor{
     height: 100vh;
     background-image: url(../img/Bolsas-de-algodón-en-bogota.jpg);
