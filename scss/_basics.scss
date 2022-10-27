@@ -1,0 +1,55 @@
+/**/
+$typeHeaderSize: 30px;
+$typeHeaderWeight: 700;
+$typeSubheaderSize: 20px;
+$typeSubheaderWeight: 500;
+$typeBaseSize: 14px;
+$typeBaseWeight: 400;
+
+/*TEXT*/
+h1{
+    font-size: $typeHeaderSize;
+    font-weight: $typeHeaderWeight;
+}
+h2{
+    font-size: $typeHeaderSize;
+    font-weight: $typeHeaderWeight;
+}
+h3, h4{
+    font-size: $typeSubheaderSize;
+    font-weight: $typeSubheaderWeight;
+}
+p, label, option, input, select{
+    font-size: $typeBaseSize;
+    font-weight: $typeBaseWeight;
+}
+.p__destacar p{
+    font-size: 18px;
+    font-weight: 800;
+}
+.btn{
+    background-color: $main-color;
+    color: hsl(0, 0%, 96%);
+    padding: 15px 40px;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color:main-color;
+    text-decoration: none;
+    &:hover{
+        background-color: #01a27f;
+        color: hsl(0, 0%, 96%);
+        padding: 15px 40px;
+        font-weight: 400;
+        font-size: 20px;
+        border-radius: 5px;
+        border-color: $main-color;
+        text-decoration: none;
+    }
+
+}
+.center{
+    text-align: center;
+    margin: 0 auto;
+}
+/*END TEXT*/

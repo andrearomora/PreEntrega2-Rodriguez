@@ -1,22 +1,14 @@
-@import "colores";
+@import "colors";
+@import "basics";
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat';
     font-family: 'Montserrat', sans-serif;
-}
-:root{
-    --main-color: #11b28e;
-    --black: #2C2C2C;
-    --typeHeaderSize: 30px;
-    --typeHeaderWeight: 700;
-    --typeSubheaderSize: 20px;
-    --typeSubheaderWeight: 500;
-    --typeBaseSize: 14px;
-    --typeBaseWeight: 400;
 }
 /*HEADER*/
 .nav-link{
@@ -30,7 +22,7 @@
 }
 .header__iconos a{
     padding: 10px;
-    color: var(--black);
+    color: $black;
     font-size: 24px;
 }
 .breadcrumb{
@@ -38,25 +30,25 @@
     margin-bottom: 30px;
 }
 .breadcrumb i{
-    color: var(--black);
+    color: $black;
 }
 .breadcrumb__element{
     display: inline;
     padding: 0px 20px 0px 0px;
 }
 .breadcrumb__element a{
-    color: var(--black);
+    color: $black;
     text-decoration: none;
 }
 .breadcrumb__element a:visited{
-    color: var(--black);
+    color: $black;
     text-decoration: none;
 }
 /* FIN HEADER*/
 
 /*FOOTER*/
 .footer{
-    background-color: var(--black);
+    background-color: $black;
     padding: 40px;
 }
 .footer-row{
@@ -67,18 +59,20 @@
 .footer__logo {
     align-self: flex-start;
     padding: 10px;
+    img{
+        height: 180px;
+    }
 }
-.footer__logo img{
-    height: 180px;
-}
+
 .footer__logo__rrss{
     display: flex;
     padding-top: 20px;
     justify-content: space-evenly;
+    img{
+        height: 30px;
+    }
 }
-.footer__logo__rrss img{
-    height: 30px;
-}
+
 .footer__section{
     padding: 10px;
 }
@@ -91,18 +85,18 @@
     list-style: none;
     color: whitesmoke;
     margin-left: -30px;
-}
-.footer__section__lista a{
-    color: whitesmoke;
-    text-decoration: none;
-}
-.footer__section__lista a:visited{
-    color: whitesmoke;
-    text-decoration: none;
-}
-.footer__section__lista a:hover{
-    color: var(--main-color);
-    text-decoration: none;
+    a{
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    a:visited{
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    a:hover{
+        color: $main-color;
+        text-decoration: none;
+    }
 }
 .footer__copy{
     color: whitesmoke;
@@ -154,56 +148,8 @@
         margin-left: -30px;
         text-align: center;
     }
-  }
+}
 /*FIN FOOTER RESPONSIVE*/
-
-/*BASICS*/
-h1{
-    font-size: var(--typeHeaderSize);
-    font-weight: var(--typeHeaderWeight);
-}
-h2{
-    font-size: var(--typeHeaderSize);
-    font-weight: var(--typeHeaderWeight);
-}
-h3, h4{
-    font-size: var(--typeSubheaderSize);
-    font-weight: var(--typeSubheaderWeight);
-}
-p, label, option, input, select{
-    font-size: var(--typeBaseSize);
-    font-weight: var(--typeBaseWeight);
-}
-.p__destacar p{
-    font-size: 18px;
-    font-weight: 800;
-}
-.btn{
-    background-color: var(--main-color);
-    color: hsl(0, 0%, 96%);
-    padding: 15px 40px;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color:var(--main-color);
-    text-decoration: none;
-}
-.btn:hover{
-    background-color: #01a27f;
-    color: hsl(0, 0%, 96%);
-    padding: 15px 40px;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color:var(--main-color);
-    text-decoration: none;
-}
-.center{
-    text-align: center;
-    margin: 0 auto;
-}
-
-/*FIN BASICS*/
 
 /*BODY*/
 .contenedor{
@@ -244,18 +190,59 @@ p, label, option, input, select{
     background-position: center;
     justify-content: center;
     align-items: flex-end;
+    a{
+        width: 200px;
+        @media (max-width: 600px){
+            transform: scaleX(-1);
+            height: 30px;
+            width: 150px;
+            padding: 0;
+            font-weight: 530;
+        }
+        &:hover{
+            @media (max-width: 600px){
+                transform: scaleX(-1);
+                background-color: #01a27f;
+                height: 30px;
+                width: 150px;
+                padding: 0;
+                font-weight: 530;
+            }
+        }   
+    }
+    @media (max-width: 600px){
+            display: flex;
+            justify-items: center;
+            margin: 0px auto;
+            text-align: center;
+            width: 100%;
+            height: 85vh;
+            background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:initial;
+            transform: scaleX(-1);
+            align-items: center;
+        }
 }
 .homeBanner__titulo{
     font-size: 35px;
+    @media (max-width: 600px){
+        font-size: 35px;
+        transform: scaleX(-1);
+        background: rgba(245,245,245,.5);
+    }
 }
 .homeBanner__texto{
     margin-left: 50%;
     font-size: 20px;
+    @media (max-width: 600px){
+        margin-left: 0%;
+        font-size: 20px;
+        transform: scaleX(-1);
+        background: rgba(245,245,245,.5);
+    }
 }
-.homeBanner a{
-    width: 200px;
-}
-
 /*BENEFICIOS*/
 .homeBeneficios{
     display: flex;
@@ -272,14 +259,15 @@ p, label, option, input, select{
     justify-content: center;
     align-items: center;
     width: 20%;
+    i{
+        font-size: 40px;
+    }
+    span{
+        font-size: var(--typeSubheaderSize);
+        padding-left: 5%;
+    }
 }
-.homeBeneficios__beneficio i{
-    font-size: 40px;
-}
-.homeBeneficios__beneficio span{
-    font-size: var(--typeSubheaderSize);
-    padding-left: 5%;
-}
+
 /*CATEGORÍAS*/
 .homeCategoria{
     height: 85vh;
@@ -296,7 +284,7 @@ p, label, option, input, select{
     font-size: 24px;
 }
 .homeCategoria__titulo__categorias{
-    border-bottom: var(--main-color) solid 2px;
+    border-bottom: $main-color solid 2px;
     margin-top: 10px;
     padding-bottom: 2%;
 }
@@ -306,6 +294,9 @@ p, label, option, input, select{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    a{
+        width: 200px;
+    }
 }
 .homeCategoria__categorias__todas{
     display: flex;
@@ -324,19 +315,17 @@ p, label, option, input, select{
 }
 .homeCategoria__categorias__una__pie{
     text-decoration: none;
-    color: var(--black);
+    color: $black;
     font-size: var(--typeSubheaderSize);
     font-weight: var(--typeSubheaderWeight);
+    &:hover{
+        text-decoration: none;
+        color: $black;
+        font-size: var(--typeSubheaderSize);
+        font-weight: var(--typeSubheaderWeight);
+    }
 }
-.homeCategoria__categorias__una__pie:hover{
-    text-decoration: none;
-    color: var(--black);
-    font-size: var(--typeSubheaderSize);
-    font-weight: var(--typeSubheaderWeight);
-}
-.homeCategoria__categorias a{
-    width: 200px;
-}
+
 /*PROPUESTA DE VALOR*/
 .homePropuestaValor{
     height: 100vh;
@@ -363,8 +352,8 @@ p, label, option, input, select{
     flex-direction: column;
 }
 .homePropuestaValor__icono{
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
+    color: $main-color;
+    border: 2px solid $main-color;
     font-size: 15px;
     height: 25px;
     width: 25px;
@@ -374,7 +363,7 @@ p, label, option, input, select{
     justify-content: center;
 }
 .homePropuestaValor__icono--grande{
-    color: var(--main-color);
+    color: $main-color;
     font-size: 50px;
     border-radius: 50%;
     display: flex;
@@ -395,155 +384,112 @@ p, label, option, input, select{
     display: flex;
     justify-content: center;
     align-items: center;
+    a{
+        margin: 0 3%;
+    }
 }
-.buyerPersona a{
-    margin: 0 3%;
-}
-@media (max-width: 600px){
-    /*BANNER RESPONSIVE*/
-    .homeBanner{
-        display: flex;
-        justify-items: center;
-        margin: 0px auto;
-        text-align: center;
-        width: 100%;
-        height: 85vh;
-        background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:initial;
-        transform: scaleX(-1);
-        align-items: center;
-    }
-    .homeBanner__texto{
-        margin-left: 0%;
-        font-size: 20px;
-        transform: scaleX(-1);
-        background: rgba(245,245,245,.5);
-    }
-    .homeBanner__titulo{
-        font-size: 35px;
-        transform: scaleX(-1);
-        background: rgba(245,245,245,.5);
-    }
-    .homeBanner a{
-        transform: scaleX(-1);
-        height: 30px;
-        width: 150px;
-        padding: 0;
-        font-weight: 530;
-    }
-    .homeBanner a:hover{
-        transform: scaleX(-1);
-        background-color: #01a27f;
-        height: 30px;
-        width: 150px;
-        padding: 0;
-        font-weight: 530;
-    }
-    /*FIN BANNER RESPONSIVE*/
 
-    /*BENEFICIOS RESPONSIVE*/
-    .homeBeneficios{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        padding: 30px;
-        text-align: center;
-        background-color: whitesmoke;
-    }
-    .homeBeneficios__beneficio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-    }
-    .homeBeneficios__beneficio i{
+/*BENEFICIOS RESPONSIVE*/
+.homeBeneficios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 30px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.homeBeneficios__beneficio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    i{
         font-size: 30px;
     }
-    .homeBeneficios__beneficio span{
+    span{
         font-size: 15px;
         padding-left: 0%;
     }
-    /*FIN BENEFICIOS RESPONSIVE*/
+}
+/*FIN BENEFICIOS RESPONSIVE*/
 
-    /*CATEGORÍAS RESPONSIVE*/
-    .homeCategoria{
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 5% 10%;
-    }
-    .homeCategoria__categorias__todas{
-        flex-direction: column;
-    }
-    /*FIN CATEGORÍAS RESPONSIVE*/
+/*CATEGORÍAS RESPONSIVE*/
+.homeCategoria{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5% 10%;
+}
+.homeCategoria__categorias__todas{
+    flex-direction: column;
+}
+/*FIN CATEGORÍAS RESPONSIVE*/
 
-    /*PROPUESTA DE VALOR RESPONSIVE*/
-    .mobile{
-        visibility:visible;
-        position: relative;
-        border: 1px solid whitesmoke;
-    }
-    .desktop{
-        visibility:hidden;
-        position: absolute;
-        height: 0%;
-    }
-    .homePropuestaValor__lista__elemento__txt{
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-    .homePropuestaValor__icono{
-        color: var(--main-color);
-        border: 2px solid var(--main-color);
-        font-size: 20px;
-        height: 52px;
-        width: 45px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    /*FIN PROPUESTA DE VALOR RESPONSIVE*/
+/*PROPUESTA DE VALOR RESPONSIVE*/
+.mobile{
+    visibility:visible;
+    position: relative;
+    border: 1px solid whitesmoke;
+}
+.desktop{
+    visibility:hidden;
+    position: absolute;
+    height: 0%;
+}
+.homePropuestaValor__lista__elemento__txt{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.homePropuestaValor__icono{
+    color: $main-color;
+    border: 2px solid $main-color;
+    font-size: 20px;
+    height: 52px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*FIN PROPUESTA DE VALOR RESPONSIVE*/
 
-    /*BUYER PERSONA RESPONSIVE*/
-    .buyerPersona{
-        height: 15vh;
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 10%;
-    }
-    .buyerPersona a{
+/*BUYER PERSONA RESPONSIVE*/
+.buyerPersona{
+    height: 15vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    a{
         margin: 3% 0%;
         height: 30px;
         width: 100%;
         padding: 0;
         font-weight: 530;
+        &:hover{
+            margin: 3% 0%;
+            background-color: #01a27f;
+            height: 30px;
+            width: 150px;
+            padding: 0;
+            font-weight: 530;
+        }
     }
-    .buyerPersona a:hover{
-        margin: 3% 0%;
-        background-color: #01a27f;
-        height: 30px;
-        width: 150px;
-        padding: 0;
-        font-weight: 530;
-    }
-    /*FIN BUYER PERSONA RESPONSIVE*/
 }
+/*FIN BUYER PERSONA RESPONSIVE*/
+
 /*FIN HOME*/
 
 /*SOBRE NOSOTROS*/
 .sobreNosotros__titular{
-    background-color: var(--black);
+    background-color: $black;
     margin-top: 0px;
     padding: 50px;
     color: whitesmoke;
@@ -558,13 +504,13 @@ p, label, option, input, select{
     color:rgb(174, 173, 173);
     padding: 10px 0px 50px 0px;
 }
-@media (max-width: 600px){
-    .cookies{
+.cookies{
+    @media (max-width: 600px){
         margin-top: 30px;
         margin-left: 5%;
         margin-right: 5%;
         margin-bottom: 30px;
-    }
+        }
 }
 /*FIN COOKIES*/
 
@@ -607,14 +553,13 @@ p, label, option, input, select{
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    
-}
-.inicioCalculadora a{
-    text-decoration: none;
-}
-.inicioCalculadora a:visited{
-    text-decoration: none;
-    color: var(--black);
+    a{
+        text-decoration: none;
+        &:visited{
+            text-decoration: none;
+            color: $black;
+        }
+    }
 }
 .inicioCalculadora__producto{
     padding: 5px;
@@ -624,11 +569,11 @@ p, label, option, input, select{
     padding: 5px;
     width: 240px;
     text-align: left;
-}
-.inicioCalculadora__producto_pie p{
-    color: var(--black);
-    text-align: left;
-    width: 230px;
+    p{
+        color: $black;
+        text-align: left;
+        width: 230px;
+    }
 }
 #tote-bag-sencilla{ 
     height: 230px;
@@ -690,27 +635,29 @@ p, label, option, input, select{
     height: 230px;
     width: 100%;
     overflow: hidden;
-}
-#video-container video{
-    width: 240px;
+    video{
+        width: 240px;
+    }
 }
 
 /*FIN CALCULADORA - INICIO - PRODUCTOS*/
 
 /*CALCULADORA POR CADA PRODUCTO*/
-.contenedor__calculando___img img{
-    height: 230px;
-    width: 230px;
-    padding-right: 20px;
-}
+.contenedor__calculando___img{
+    img{
+        height: 230px;
+        width: 230px;
+        padding-right: 20px;
+    }
+} 
 .contenedor__calculando{
     display: flex;
 }
 .contenedor__calculando__form{
     padding: 15px 0px;
-}
-.contenedor__calculando__form div{
-    margin: 15px 0px;
+    div{
+        margin: 15px 0px;
+    }
 }
 .contenedor__calculando__form__inline{
     display: inline;
@@ -726,83 +673,90 @@ p, label, option, input, select{
 .compras__tabla__lista{
     padding: 10px;
     vertical-align: center;
-}
-.compras__tabla__lista li{
-    list-style: none;
-    padding: 10px;
+    li{
+        list-style: none;
+        padding: 10px;
+    }
 }
 /*FIN TABLA COMPRAS*/
 
 /*TIENDA*/
 .contenedorTienda{
     margin: 30px 10%;
+    .product-item {
+        min-height: 450px;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0;
+        .product {
+            width: 100%;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .icons{
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: transform 0.6s ease;
+                    transform: rotate(180deg);
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $main-color;
+                        color: #fff;
+                    }
+                    &:nth-last-of-type(3) {
+                        transition-delay: 0.2s;
+                    }
+                    &:nth-last-of-type(2) {
+                        transition-delay: 0.15s;
+                    }
+                    &:nth-last-of-type(1) {
+                        transition-delay: 0.1s;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .product{
+                .icons{
+                    .icon{
+                        transform: translateY(-60px);
+                    }
+                }
+            }
+        }
+        .tag{
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 500;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            padding: 0 0.4rem;
+        }
+    }
 }
-.contenedorTienda .product-item {
-    min-height: 450px;
-    border: none;
-    overflow: hidden;
-    position: relative;
-    border-radius: 0;
-}
-
-.contenedorTienda .product-item .product {
-    width: 100%;
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.contenedorTienda .product-item .product img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contenedorTienda .product-item .product .icons .icon {
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.6s ease;
-    transform: rotate(180deg);
-    cursor: pointer;
-}
-
-.contenedorTienda .product-item .product .icons .icon:hover {
-    background-color: var(--main-color);
-    color: #fff;
-}
-
-.contenedorTienda .product-item .product .icons .icon:nth-last-of-type(3) {
-    transition-delay: 0.2s;
-}
-
-.contenedorTienda .product-item .product .icons .icon:nth-last-of-type(2) {
-    transition-delay: 0.15s;
-}
-
-.contenedorTienda .product-item .product .icons .icon:nth-last-of-type(1) {
-    transition-delay: 0.1s;
-}
-
-.contenedorTienda .product-item:hover .product .icons .icon {
-    transform: translateY(-60px);
-}
-
-.contenedorTienda .product-item .tag {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 500;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    padding: 0 0.4rem;
-}
-
+/*AVANCE EDICION SASS 27/10/2022*/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 .contenedorTienda .product-item .title {
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -824,7 +778,7 @@ p, label, option, input, select{
 }
 
 .bg-green {
-    background-color: var(--main-color);
+    background-color: $main-color;
     color: #fff;
 }
 
@@ -845,17 +799,17 @@ p, label, option, input, select{
 }
 .categories a{
     text-decoration: none;
-    color: var(--black);
+    color: $black;
     margin: 20px auto;
     padding: 10px 5%;
     font-weight: 800;
     border-bottom: solid transparent;
-}
-.categories a:hover{
-    border-bottom: #11b28e solid;
-}
-.categories .categorieFocus{
-    border-bottom: #11b28e solid;
+    &:hover{
+        border-bottom: $main-color solid;
+    }
+    .categorieFocus{
+        border-bottom: $main-color solid;
+    }
 }
 
 /*FIN TIENDA*/
