@@ -252,6 +252,15 @@
     height: 15vh;
     text-align: center;
     background-color: whitesmoke;
+    @media(max-width: 600px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 30px;
+        text-align: center;
+        background-color: whitesmoke;
+    }
 }
 .homeBeneficios__beneficio{
     display: flex;
@@ -266,16 +275,38 @@
         font-size: var(--typeSubheaderSize);
         padding-left: 5%;
     }
+    @media(max-width: 600px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        i{
+            font-size: 30px;
+        }
+        span{
+            font-size: 15px;
+            padding-left: 0%;
+        }
+    }
 }
 
 /*CATEGORÍAS*/
 .homeCategoria{
-    height: 85vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0% 15%;
+    margin: 5% 15%;
+    @media (max-width: 600px){
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 5% 10%;
+    }
 }
 .homeCategoria__titulo{
     text-align: center;
@@ -302,6 +333,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 800px){
+        flex-direction: column;
+    }
 }
 .homeCategoria__categorias__una{
     display: flex;
@@ -316,13 +350,13 @@
 .homeCategoria__categorias__una__pie{
     text-decoration: none;
     color: $black;
-    font-size: var(--typeSubheaderSize);
-    font-weight: var(--typeSubheaderWeight);
+    font-size: $typeSubheaderSize;
+    font-weight: $typeSubheaderWeight;
     &:hover{
         text-decoration: none;
         color: $black;
-        font-size: var(--typeSubheaderSize);
-        font-weight: var(--typeSubheaderWeight);
+        font-size: $typeSubheaderSize;
+        font-weight: $typeSubheaderWeight;
     }
 }
 
@@ -350,6 +384,11 @@
     padding-left: 30px;
     display: flex;
     flex-direction: column;
+    @media(max-width: 800px){
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 .homePropuestaValor__icono{
     color: $main-color;
@@ -361,6 +400,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width: 800px){
+        color: $main-color;
+        border: 2px solid $main-color;
+        font-size: 20px;
+        height: 52px;
+        width: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .homePropuestaValor__icono--grande{
     color: $main-color;
@@ -373,10 +423,20 @@
 .desktop{
     visibility:visible;
     position: relative;
+    @media (max-width: 800px){
+        visibility:hidden;
+        position: absolute;
+        height: 0%;
+    }
 }
 .mobile{
     visibility:hidden;
     position: absolute;
+    @media (max-width: 800px){
+        visibility:visible;
+        position: relative;
+        border: 1px solid whitesmoke;
+    }
 }
 .buyerPersona{
     height: 20vh;
@@ -387,104 +447,31 @@
     a{
         margin: 0 3%;
     }
-}
-
-/*BENEFICIOS RESPONSIVE*/
-.homeBeneficios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding: 30px;
-    text-align: center;
-    background-color: whitesmoke;
-}
-.homeBeneficios__beneficio{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    i{
-        font-size: 30px;
-    }
-    span{
-        font-size: 15px;
-        padding-left: 0%;
-    }
-}
-/*FIN BENEFICIOS RESPONSIVE*/
-
-/*CATEGORÍAS RESPONSIVE*/
-.homeCategoria{
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 5% 10%;
-}
-.homeCategoria__categorias__todas{
-    flex-direction: column;
-}
-/*FIN CATEGORÍAS RESPONSIVE*/
-
-/*PROPUESTA DE VALOR RESPONSIVE*/
-.mobile{
-    visibility:visible;
-    position: relative;
-    border: 1px solid whitesmoke;
-}
-.desktop{
-    visibility:hidden;
-    position: absolute;
-    height: 0%;
-}
-.homePropuestaValor__lista__elemento__txt{
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.homePropuestaValor__icono{
-    color: $main-color;
-    border: 2px solid $main-color;
-    font-size: 20px;
-    height: 52px;
-    width: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/*FIN PROPUESTA DE VALOR RESPONSIVE*/
-
-/*BUYER PERSONA RESPONSIVE*/
-.buyerPersona{
-    height: 15vh;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    a{
-        margin: 3% 0%;
-        height: 30px;
-        width: 100%;
-        padding: 0;
-        font-weight: 530;
-        &:hover{
+    @media(max-width: 600px){
+        height: 15vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        a{
             margin: 3% 0%;
-            background-color: #01a27f;
             height: 30px;
-            width: 150px;
+            width: 100%;
             padding: 0;
             font-weight: 530;
+            &:hover{
+                margin: 3% 0%;
+                background-color: #01a27f;
+                height: 30px;
+                width: 150px;
+                padding: 0;
+                font-weight: 530;
+            }
         }
     }
 }
-/*FIN BUYER PERSONA RESPONSIVE*/
-
 /*FIN HOME*/
 
 /*SOBRE NOSOTROS*/
