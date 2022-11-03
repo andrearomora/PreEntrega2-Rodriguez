@@ -35,14 +35,14 @@
 .breadcrumb__element{
     display: inline;
     padding: 0px 20px 0px 0px;
-}
-.breadcrumb__element a{
-    color: $black;
-    text-decoration: none;
-}
-.breadcrumb__element a:visited{
-    color: $black;
-    text-decoration: none;
+    a{
+        color: $black;
+        text-decoration: none;
+        &:visited{
+            color: $black;
+        text-decoration: none;
+        }
+    }
 }
 /* FIN HEADER*/
 
@@ -55,6 +55,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
 .footer__logo {
     align-self: flex-start;
@@ -62,8 +65,11 @@
     img{
         height: 180px;
     }
+    @media (max-width: 600px) {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
-
 .footer__logo__rrss{
     display: flex;
     padding-top: 20px;
@@ -71,15 +77,26 @@
     img{
         height: 30px;
     }
+    @media (max-width: 600px) {
+        display: flex;
+        padding-top: 0px;
+        justify-content: center;
+        a{
+            padding: 20px;
+        }
+    }
 }
-
 .footer__section{
     padding: 10px;
 }
 .footer__section__titulo{
     color: whitesmoke;
     font-weight: 1000;
-
+    @media (max-width: 600px) {
+        color: whitesmoke;
+        font-weight: 1000;
+        text-align: center;
+    }
 }
 .footer__section__lista{
     list-style: none;
@@ -96,6 +113,12 @@
     a:hover{
         color: $main-color;
         text-decoration: none;
+    }
+    @media (max-width: 600px) {
+        list-style: none;
+        color: whitesmoke;
+        margin-left: -30px;
+        text-align: center;
     }
 }
 .footer__copy{
@@ -118,38 +141,6 @@
     }
 }
 /*FIN FOOTER*/
-
-/*FOOTER RESPONSIVE*/
-@media (max-width: 600px) {
-    .footer-row{
-        display: block;
-    }
-    .footer__logo{
-        text-align: center;
-        margin: 0 auto;
-    }
-    .footer__logo__rrss{
-        display: flex;
-        padding-top: 0px;
-        justify-content: center;
-    }
-    .footer__logo__rrss a{
-        padding: 20px;
-    }
-    .footer__section__titulo{
-        color: whitesmoke;
-        font-weight: 1000;
-        text-align: center;
-    
-    }
-    .footer__section__lista{
-        list-style: none;
-        color: whitesmoke;
-        margin-left: -30px;
-        text-align: center;
-    }
-}
-/*FIN FOOTER RESPONSIVE*/
 
 /*BODY*/
 .contenedor{
@@ -195,8 +186,8 @@
         @media (max-width: 600px){
             transform: scaleX(-1);
             height: 30px;
-            width: 150px;
-            padding: 0;
+            width: auto;
+            padding: 0 10px;
             font-weight: 530;
         }
         &:hover{
@@ -204,26 +195,26 @@
                 transform: scaleX(-1);
                 background-color: #01a27f;
                 height: 30px;
-                width: 150px;
-                padding: 0;
+                width: auto;
+                padding: 0 10px;
                 font-weight: 530;
             }
         }   
     }
     @media (max-width: 600px){
-            display: flex;
-            justify-items: center;
-            margin: 0px auto;
-            text-align: center;
-            width: 100%;
-            height: 85vh;
-            background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position:initial;
-            transform: scaleX(-1);
-            align-items: center;
-        }
+        display: flex;
+        justify-items: center;
+        margin: 0px auto;
+        text-align: center;
+        width: 100%;
+        height: 85vh;
+        background-image: url(../img/Bolsas-de-algodón-en-bogota-tote-bag.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:initial;
+        transform: scaleX(-1);
+        align-items: center;
+    }
 }
 .homeBanner__titulo{
     font-size: 35px;
@@ -272,10 +263,10 @@
         font-size: 40px;
     }
     span{
-        font-size: var(--typeSubheaderSize);
+        font-size: $typeSubheaderSize;
         padding-left: 5%;
     }
-    @media(max-width: 600px){
+    @media(max-width: 800px){
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -353,10 +344,7 @@
     font-size: $typeSubheaderSize;
     font-weight: $typeSubheaderWeight;
     &:hover{
-        text-decoration: none;
-        color: $black;
-        font-size: $typeSubheaderSize;
-        font-weight: $typeSubheaderWeight;
+        @extend .homeCategoria__categorias__una__pie;
     }
 }
 
@@ -465,7 +453,7 @@
                 margin: 3% 0%;
                 background-color: #01a27f;
                 height: 30px;
-                width: 150px;
+                width: 100%;
                 padding: 0;
                 font-weight: 530;
             }
@@ -525,11 +513,15 @@
     margin: 2% 1%;
 }
 .contacto-padding{
-    padding: 1% 1%;
+    padding: 5% 1%;
 }
 .contacto__datos{
     display: flex;
     justify-content: space-around;
+    font-size: $typeBaseSize;
+    div{
+    @extend .homeBeneficios__beneficio;
+    }
 }
 /*FIN CONTACTO*/
 
@@ -733,31 +725,20 @@
             left: 20px;
             padding: 0 0.4rem;
         }
+        .title {
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        .fa-star {
+            font-size: 0.65rem;
+            color: goldenrod;
+        }
+        .price {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
     }
-}
-/*AVANCE EDICION SASS 27/10/2022*/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-.contenedorTienda .product-item .title {
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-.contenedorTienda .product-item .fa-star {
-    font-size: 0.65rem;
-    color: goldenrod;
-}
-
-.contenedorTienda .product-item .price {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 600;
 }
 
 .fw-800 {
@@ -783,19 +764,19 @@
     display: flex;
     list-style: none;
     justify-content: center;
-}
-.categories a{
-    text-decoration: none;
-    color: $black;
-    margin: 20px auto;
-    padding: 10px 5%;
-    font-weight: 800;
-    border-bottom: solid transparent;
-    &:hover{
-        border-bottom: $main-color solid;
-    }
-    .categorieFocus{
-        border-bottom: $main-color solid;
+    a{
+        text-decoration: none;
+        color: $black;
+        margin: 20px auto;
+        padding: 10px 5%;
+        font-weight: 800;
+        border-bottom: solid transparent;
+        &:hover{
+            border-bottom: $main-color solid;
+        }
+        .categorieFocus{
+            border-bottom: $main-color solid;
+        }
     }
 }
 

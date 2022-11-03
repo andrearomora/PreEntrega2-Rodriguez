@@ -79,14 +79,12 @@ p, label, option, input, select {
 .breadcrumb__element {
   display: inline;
   padding: 0px 20px 0px 0px; }
-
-.breadcrumb__element a {
-  color: #2C2C2C;
-  text-decoration: none; }
-
-.breadcrumb__element a:visited {
-  color: #2C2C2C;
-  text-decoration: none; }
+  .breadcrumb__element a {
+    color: #2C2C2C;
+    text-decoration: none; }
+    .breadcrumb__element a:visited {
+      color: #2C2C2C;
+      text-decoration: none; }
 
 /* FIN HEADER*/
 /*FOOTER*/
@@ -98,12 +96,19 @@ p, label, option, input, select {
   display: flex;
   align-items: center;
   justify-content: space-around; }
+  @media (max-width: 600px) {
+    .footer-row {
+      display: block; } }
 
 .footer__logo {
   align-self: flex-start;
   padding: 10px; }
   .footer__logo img {
     height: 180px; }
+  @media (max-width: 600px) {
+    .footer__logo {
+      text-align: center;
+      margin: 0 auto; } }
 
 .footer__logo__rrss {
   display: flex;
@@ -111,6 +116,13 @@ p, label, option, input, select {
   justify-content: space-evenly; }
   .footer__logo__rrss img {
     height: 30px; }
+  @media (max-width: 600px) {
+    .footer__logo__rrss {
+      display: flex;
+      padding-top: 0px;
+      justify-content: center; }
+      .footer__logo__rrss a {
+        padding: 20px; } }
 
 .footer__section {
   padding: 10px; }
@@ -118,6 +130,11 @@ p, label, option, input, select {
 .footer__section__titulo {
   color: whitesmoke;
   font-weight: 1000; }
+  @media (max-width: 600px) {
+    .footer__section__titulo {
+      color: whitesmoke;
+      font-weight: 1000;
+      text-align: center; } }
 
 .footer__section__lista {
   list-style: none;
@@ -132,6 +149,12 @@ p, label, option, input, select {
   .footer__section__lista a:hover {
     color: #11b28e;
     text-decoration: none; }
+  @media (max-width: 600px) {
+    .footer__section__lista {
+      list-style: none;
+      color: whitesmoke;
+      margin-left: -30px;
+      text-align: center; } }
 
 .footer__copy {
   color: whitesmoke;
@@ -150,30 +173,6 @@ p, label, option, input, select {
     transform: translatey(0px); } }
 
 /*FIN FOOTER*/
-/*FOOTER RESPONSIVE*/
-@media (max-width: 600px) {
-  .footer-row {
-    display: block; }
-  .footer__logo {
-    text-align: center;
-    margin: 0 auto; }
-  .footer__logo__rrss {
-    display: flex;
-    padding-top: 0px;
-    justify-content: center; }
-  .footer__logo__rrss a {
-    padding: 20px; }
-  .footer__section__titulo {
-    color: whitesmoke;
-    font-weight: 1000;
-    text-align: center; }
-  .footer__section__lista {
-    list-style: none;
-    color: whitesmoke;
-    margin-left: -30px;
-    text-align: center; } }
-
-/*FIN FOOTER RESPONSIVE*/
 /*BODY*/
 .contenedor {
   margin-top: 50px;
@@ -216,16 +215,16 @@ p, label, option, input, select {
       .homeBanner a {
         transform: scaleX(-1);
         height: 30px;
-        width: 150px;
-        padding: 0;
+        width: auto;
+        padding: 0 10px;
         font-weight: 530; } }
     @media (max-width: 600px) {
       .homeBanner a:hover {
         transform: scaleX(-1);
         background-color: #01a27f;
         height: 30px;
-        width: 150px;
-        padding: 0;
+        width: auto;
+        padding: 0 10px;
         font-weight: 530; } }
   @media (max-width: 600px) {
     .homeBanner {
@@ -279,27 +278,27 @@ p, label, option, input, select {
       text-align: center;
       background-color: whitesmoke; } }
 
-.homeBeneficios__beneficio {
+.homeBeneficios__beneficio, .contacto__datos div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 20%; }
-  .homeBeneficios__beneficio i {
+  .homeBeneficios__beneficio i, .contacto__datos div i {
     font-size: 40px; }
-  .homeBeneficios__beneficio span {
-    font-size: var(--typeSubheaderSize);
+  .homeBeneficios__beneficio span, .contacto__datos div span {
+    font-size: 20px;
     padding-left: 5%; }
-  @media (max-width: 600px) {
-    .homeBeneficios__beneficio {
+  @media (max-width: 800px) {
+    .homeBeneficios__beneficio, .contacto__datos div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 80%; }
-      .homeBeneficios__beneficio i {
+      .homeBeneficios__beneficio i, .contacto__datos div i {
         font-size: 30px; }
-      .homeBeneficios__beneficio span {
+      .homeBeneficios__beneficio span, .contacto__datos div span {
         font-size: 15px;
         padding-left: 0%; } }
 
@@ -358,16 +357,11 @@ p, label, option, input, select {
 .homeCategoria__categorias__una__img {
   height: 250px; }
 
-.homeCategoria__categorias__una__pie {
+.homeCategoria__categorias__una__pie, .homeCategoria__categorias__una__pie:hover {
   text-decoration: none;
   color: #2C2C2C;
   font-size: 20px;
   font-weight: 500; }
-  .homeCategoria__categorias__una__pie:hover {
-    text-decoration: none;
-    color: #2C2C2C;
-    font-size: 20px;
-    font-weight: 500; }
 
 /*PROPUESTA DE VALOR*/
 .homePropuestaValor {
@@ -474,7 +468,7 @@ p, label, option, input, select {
           margin: 3% 0%;
           background-color: #01a27f;
           height: 30px;
-          width: 150px;
+          width: 100%;
           padding: 0;
           font-weight: 530; } }
 
@@ -526,11 +520,12 @@ p, label, option, input, select {
   margin: 2% 1%; }
 
 .contacto-padding {
-  padding: 1% 1%; }
+  padding: 5% 1%; }
 
 .contacto__datos {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  font-size: 14px; }
 
 /*FIN CONTACTO*/
 /*CALCULADORA - INICIO - PRODUCTOS*/
@@ -704,28 +699,16 @@ p, label, option, input, select {
       top: 10px;
       left: 20px;
       padding: 0 0.4rem; }
-
-/*AVANCE EDICION SASS 27/10/2022*/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-.contenedorTienda .product-item .title {
-  font-size: 0.95rem;
-  letter-spacing: 0.5px; }
-
-.contenedorTienda .product-item .fa-star {
-  font-size: 0.65rem;
-  color: goldenrod; }
-
-.contenedorTienda .product-item .price {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 600; }
+    .contenedorTienda .product-item .title {
+      font-size: 0.95rem;
+      letter-spacing: 0.5px; }
+    .contenedorTienda .product-item .fa-star {
+      font-size: 0.65rem;
+      color: goldenrod; }
+    .contenedorTienda .product-item .price {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: 600; }
 
 .fw-800 {
   font-weight: 800; }
@@ -746,17 +729,16 @@ p, label, option, input, select {
   display: flex;
   list-style: none;
   justify-content: center; }
-
-.categories a {
-  text-decoration: none;
-  color: #2C2C2C;
-  margin: 20px auto;
-  padding: 10px 5%;
-  font-weight: 800;
-  border-bottom: solid transparent; }
-  .categories a:hover {
-    border-bottom: #11b28e solid; }
-  .categories a .categorieFocus {
-    border-bottom: #11b28e solid; }
+  .categories a {
+    text-decoration: none;
+    color: #2C2C2C;
+    margin: 20px auto;
+    padding: 10px 5%;
+    font-weight: 800;
+    border-bottom: solid transparent; }
+    .categories a:hover {
+      border-bottom: #11b28e solid; }
+    .categories a .categorieFocus {
+      border-bottom: #11b28e solid; }
 
 /*FIN TIENDA*/
