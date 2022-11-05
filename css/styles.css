@@ -23,24 +23,17 @@ p, label, option, input, select {
   font-size: 18px;
   font-weight: 800; }
 
-.btn {
+.btn, .btn:hover {
   background-color: #11b28e;
   color: whitesmoke;
-  padding: 15px 40px;
+  padding: 10px 30px;
   font-weight: 400;
   font-size: 20px;
   border-radius: 5px;
-  border-color: main-color;
+  border-color: #11b28e;
   text-decoration: none; }
   .btn:hover {
-    background-color: #01a27f;
-    color: whitesmoke;
-    padding: 15px 40px;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color: #11b28e;
-    text-decoration: none; }
+    background-color: #01a27f; }
 
 .center {
   text-align: center;
@@ -68,23 +61,6 @@ p, label, option, input, select {
   padding: 10px;
   color: #2C2C2C;
   font-size: 24px; }
-
-.breadcrumb {
-  text-decoration: none;
-  margin-bottom: 30px; }
-
-.breadcrumb i {
-  color: #2C2C2C; }
-
-.breadcrumb__element {
-  display: inline;
-  padding: 0px 20px 0px 0px; }
-  .breadcrumb__element a {
-    color: #2C2C2C;
-    text-decoration: none; }
-    .breadcrumb__element a:visited {
-      color: #2C2C2C;
-      text-decoration: none; }
 
 /* FIN HEADER*/
 /*FOOTER*/
@@ -451,7 +427,7 @@ p, label, option, input, select {
     margin: 0 3%; }
   @media (max-width: 600px) {
     .buyerPersona {
-      height: 15vh;
+      height: 30vh;
       background-color: whitesmoke;
       display: flex;
       flex-direction: column;
@@ -528,128 +504,6 @@ p, label, option, input, select {
   font-size: 14px; }
 
 /*FIN CONTACTO*/
-/*CALCULADORA - INICIO - PRODUCTOS*/
-.inicioCalculadora {
-  padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  .inicioCalculadora a {
-    text-decoration: none; }
-    .inicioCalculadora a:visited {
-      text-decoration: none;
-      color: #2C2C2C; }
-
-.inicioCalculadora__producto {
-  padding: 5px;
-  margin: 30px 10px; }
-
-.inicioCalculadora__producto__pie {
-  padding: 5px;
-  width: 240px;
-  text-align: left; }
-  .inicioCalculadora__producto__pie p {
-    color: #2C2C2C;
-    text-align: left;
-    width: 230px; }
-
-#tote-bag-sencilla {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/tote-bag-sencilla.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-#tote-bag-bolsillo {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/tote-bag-bolsillo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-#tote-bag-bolsillo-cremallera {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/tote-bag-cremallera.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-#ajustable-clasica {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/Ajustable.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-#tula {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/tula.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
-
-#tote-bag-cierre-completo {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/bolsa-cierre-completo.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
-
-#ajustable-bolero {
-  height: 230px;
-  width: 230px;
-  background-image: url(../img/bolsa-ajustable-bolero.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
-
-#video-container {
-  height: 230px;
-  width: 100%;
-  overflow: hidden; }
-  #video-container video {
-    width: 240px; }
-
-/*FIN CALCULADORA - INICIO - PRODUCTOS*/
-/*CALCULADORA POR CADA PRODUCTO*/
-.contenedor__calculando___img img {
-  height: 230px;
-  width: 230px;
-  padding-right: 20px; }
-
-.contenedor__calculando {
-  display: flex; }
-
-.contenedor__calculando__form {
-  padding: 15px 0px; }
-  .contenedor__calculando__form div {
-    margin: 15px 0px; }
-
-.contenedor__calculando__form__inline {
-  display: inline; }
-
-/*FIN CALCULADORA POR CADA PRODUCTO*/
-/*TABLA COMPRAS*/
-.compras__tabla {
-  width: 100%;
-  border: 1px solid #aeadad;
-  border-collapse: collapse; }
-
-.compras__tabla__lista {
-  padding: 10px;
-  vertical-align: center; }
-  .compras__tabla__lista li {
-    list-style: none;
-    padding: 10px; }
-
-/*FIN TABLA COMPRAS*/
 /*TIENDA*/
 .contenedorTienda {
   margin: 30px 10%; }
@@ -742,3 +596,8 @@ p, label, option, input, select {
       border-bottom: #11b28e solid; }
 
 /*FIN TIENDA*/
+/**/
+.cookies p, .cookies ol, .cookies li {
+  font-size: 14px; }
+
+/**/

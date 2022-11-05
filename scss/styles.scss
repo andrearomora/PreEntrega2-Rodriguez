@@ -25,25 +25,6 @@
     color: $black;
     font-size: 24px;
 }
-.breadcrumb{
-    text-decoration: none;
-    margin-bottom: 30px;
-}
-.breadcrumb i{
-    color: $black;
-}
-.breadcrumb__element{
-    display: inline;
-    padding: 0px 20px 0px 0px;
-    a{
-        color: $black;
-        text-decoration: none;
-        &:visited{
-            color: $black;
-        text-decoration: none;
-        }
-    }
-}
 /* FIN HEADER*/
 
 /*FOOTER*/
@@ -436,7 +417,7 @@
         margin: 0 3%;
     }
     @media(max-width: 600px){
-        height: 15vh;
+        height: 30vh;
         background-color: whitesmoke;
         display: flex;
         flex-direction: column;
@@ -524,140 +505,6 @@
     }
 }
 /*FIN CONTACTO*/
-
-/*CALCULADORA - INICIO - PRODUCTOS*/
-.inicioCalculadora{
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    a{
-        text-decoration: none;
-        &:visited{
-            text-decoration: none;
-            color: $black;
-        }
-    }
-}
-.inicioCalculadora__producto{
-    padding: 5px;
-    margin: 30px 10px;
-}
-.inicioCalculadora__producto__pie{
-    padding: 5px;
-    width: 240px;
-    text-align: left;
-    p{
-        color: $black;
-        text-align: left;
-        width: 230px;
-    }
-}
-#tote-bag-sencilla{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/tote-bag-sencilla.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#tote-bag-bolsillo{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/tote-bag-bolsillo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#tote-bag-bolsillo-cremallera{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/tote-bag-cremallera.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#ajustable-clasica{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/Ajustable.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#tula{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/tula.jpeg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-#tote-bag-cierre-completo{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/bolsa-cierre-completo.jpeg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-#ajustable-bolero{ 
-    height: 230px;
-    width: 230px;
-    background-image: url(../img/bolsa-ajustable-bolero.jpeg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-#video-container{
-    height: 230px;
-    width: 100%;
-    overflow: hidden;
-    video{
-        width: 240px;
-    }
-}
-
-/*FIN CALCULADORA - INICIO - PRODUCTOS*/
-
-/*CALCULADORA POR CADA PRODUCTO*/
-.contenedor__calculando___img{
-    img{
-        height: 230px;
-        width: 230px;
-        padding-right: 20px;
-    }
-} 
-.contenedor__calculando{
-    display: flex;
-}
-.contenedor__calculando__form{
-    padding: 15px 0px;
-    div{
-        margin: 15px 0px;
-    }
-}
-.contenedor__calculando__form__inline{
-    display: inline;
-}
-/*FIN CALCULADORA POR CADA PRODUCTO*/
-
-/*TABLA COMPRAS*/
-.compras__tabla{
-    width: 100%;
-    border: 1px solid rgb(174, 173, 173);
-    border-collapse: collapse;
-}
-.compras__tabla__lista{
-    padding: 10px;
-    vertical-align: center;
-    li{
-        list-style: none;
-        padding: 10px;
-    }
-}
-/*FIN TABLA COMPRAS*/
 
 /*TIENDA*/
 .contenedorTienda{
@@ -781,3 +628,11 @@
 }
 
 /*FIN TIENDA*/
+
+/**/
+.cookies{
+    p, ol, li{
+        font-size: $typeBaseSize;
+    }
+}
+/**/

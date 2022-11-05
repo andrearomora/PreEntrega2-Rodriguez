@@ -30,21 +30,15 @@ p, label, option, input, select{
 .btn{
     background-color: $main-color;
     color: hsl(0, 0%, 96%);
-    padding: 15px 40px;
+    padding: 10px 30px;
     font-weight: 400;
     font-size: 20px;
     border-radius: 5px;
-    border-color:main-color;
+    border-color: $main-color;
     text-decoration: none;
     &:hover{
+        @extend .btn;
         background-color: #01a27f;
-        color: hsl(0, 0%, 96%);
-        padding: 15px 40px;
-        font-weight: 400;
-        font-size: 20px;
-        border-radius: 5px;
-        border-color: $main-color;
-        text-decoration: none;
     }
 
 }
