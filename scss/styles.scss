@@ -15,13 +15,13 @@
     text-align: center;
 }
 .header__logo{
-    height: 50px;
+    height: $paso/2;
 }
 .header__iconos{
     text-align: center;
 }
 .header__iconos a{
-    padding: 10px;
+    padding: $paso/10;
     color: $black;
     font-size: 24px;
 }
@@ -33,16 +33,15 @@
     padding: 40px;
 }
 .footer-row{
-    display: flex;
+    @include flex(flex, space-around);
     align-items: center;
-    justify-content: space-around;
     @media (max-width: 600px) {
         display: block;
     }
 }
 .footer__logo {
     align-self: flex-start;
-    padding: 10px;
+    padding: $paso/10;
     img{
         height: 180px;
     }
@@ -52,23 +51,21 @@
     }
 }
 .footer__logo__rrss{
-    display: flex;
-    padding-top: 20px;
-    justify-content: space-evenly;
+    @include flex(flex, space-evenly);
+    padding-top: $paso/5;
     img{
         height: 30px;
     }
     @media (max-width: 600px) {
-        display: flex;
+        @include flex(flex, center);
         padding-top: 0px;
-        justify-content: center;
         a{
-            padding: 20px;
+            padding: $paso/5;
         }
     }
 }
 .footer__section{
-    padding: 10px;
+    padding: $paso/10;
 }
 .footer__section__titulo{
     color: whitesmoke;
@@ -125,15 +122,14 @@
 
 /*BODY*/
 .contenedor{
-    margin-top: 50px;
+    margin-top: $paso/2;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 30px;
 }
 .contenedor__titulos{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    @include flex(flex, space-between);
+    padding-bottom: $paso/5;
 }
 @media (max-width: 600px){
     .contenedor{
@@ -149,7 +145,7 @@
 
 /*BANNER*/
 .homeBanner{
-    display: flex;
+    @include flex(flex, center);
     flex-direction: column;
     justify-items: flex-end;
     padding: 0% 10% 0% 10%;
@@ -160,7 +156,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    justify-content: center;
     align-items: flex-end;
     a{
         width: 200px;
@@ -168,7 +163,7 @@
             transform: scaleX(-1);
             height: 30px;
             width: auto;
-            padding: 0 10px;
+            padding: 0 $paso/10;
             font-weight: 530;
         }
         &:hover{
@@ -177,7 +172,7 @@
                 background-color: #01a27f;
                 height: 30px;
                 width: auto;
-                padding: 0 10px;
+                padding: 0 $paso/10;
                 font-weight: 530;
             }
         }   
@@ -210,23 +205,21 @@
     font-size: 20px;
     @media (max-width: 600px){
         margin-left: 0%;
-        font-size: 20px;
+        font-size: $paso/5;
         transform: scaleX(-1);
         background: rgba(245,245,245,.5);
     }
 }
 /*BENEFICIOS*/
 .homeBeneficios{
-    display: flex;
-    justify-content: space-around;
+    @include flex(flex, space-around);
     align-items: center;
     flex-wrap: wrap;
     height: 15vh;
     text-align: center;
     background-color: whitesmoke;
     @media(max-width: 600px){
-        display: flex;
-        justify-content: center;
+        @include flex(flex, center);
         align-items: center;
         flex-wrap: nowrap;
         padding: 30px;
@@ -235,9 +228,8 @@
     }
 }
 .homeBeneficios__beneficio{
-    display: flex;
+    @include flex(flex, center);
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 20%;
     i{
@@ -248,9 +240,8 @@
         padding-left: 5%;
     }
     @media(max-width: 800px){
-        display: flex;
+        @include flex(flex, center);
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         width: 80%;
         i{
@@ -266,15 +257,13 @@
 /*CATEGORÍAS*/
 .homeCategoria{
     height: auto;
-    display: flex;
-    justify-content: center;
+    @include flex(flex, center);
     align-items: center;
     flex-direction: column;
     margin: 5% 15%;
     @media (max-width: 600px){
         height: auto;
-        display: flex;
-        justify-content: center;
+        @include flex(flex, center);
         align-items: center;
         flex-direction: column;
         margin: 5% 10%;
@@ -288,22 +277,20 @@
 }
 .homeCategoria__titulo__categorias{
     border-bottom: $main-color solid 2px;
-    margin-top: 10px;
+    margin-top: $paso/10;
     padding-bottom: 2%;
 }
 .homeCategoria__categorias{
-    display: flex;
+    @include flex(flex, center);
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
     a{
         width: 200px;
     }
 }
 .homeCategoria__categorias__todas{
-    display: flex;
-    justify-content: center;
+    @include flex(flex, center);
     align-items: center;
     @media (max-width: 800px){
         flex-direction: column;
@@ -354,7 +341,7 @@
     display: flex;
     flex-direction: column;
     @media(max-width: 800px){
-        padding-left: 20px;
+        padding-left: $paso/5;
         display: flex;
         flex-direction: column;
     }
@@ -366,28 +353,25 @@
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    display: flex;
+    @include flex(flex, center);
     align-items: center;
-    justify-content: center;
     @media(max-width: 800px){
         color: $main-color;
         border: 2px solid $main-color;
-        font-size: 20px;
+        font-size: $paso/5;
         height: 52px;
         width: 45px;
         border-radius: 50%;
-        display: flex;
+        @include flex(flex, center);
         align-items: center;
-        justify-content: center;
     }
 }
 .homePropuestaValor__icono--grande{
     color: $main-color;
-    font-size: 50px;
+    font-size: $paso/5;
     border-radius: 50%;
-    display: flex;
+    @include flex(flex, center);
     align-items: center;
-    justify-content: center;
 }
 .desktop{
     visibility:visible;
@@ -410,8 +394,7 @@
 .buyerPersona{
     height: 20vh;
     background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
+    @include flex(flex, center);
     align-items: center;
     a{
         margin: 0 3%;
@@ -419,10 +402,9 @@
     @media(max-width: 600px){
         height: 30vh;
         background-color: whitesmoke;
-        display: flex;
+        @include flex(flex, center);
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         padding: 0 10%;
         a{
             margin: 3% 0%;
@@ -497,8 +479,7 @@
     padding: 5% 1%;
 }
 .contacto__datos{
-    display: flex;
-    justify-content: space-around;
+    @include flex(flex, space-around);
     font-size: $typeBaseSize;
     div{
     @extend .homeBeneficios__beneficio;
@@ -532,8 +513,7 @@
                     height: 40px;
                     background-color: #fff;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
+                    @include flex(flex, center);
                     align-items: center;
                     transition: transform 0.6s ease;
                     transform: rotate(180deg);
@@ -608,9 +588,8 @@
 }
 
 .categories{
-    display: flex;
+    @include flex(flex, center);
     list-style: none;
-    justify-content: center;
     a{
         text-decoration: none;
         color: $black;
